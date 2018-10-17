@@ -6,33 +6,33 @@ namespace DEV1
     class MainClass{
         public static void Main(string[] args)
         {
-            string input_string = args[0];
-            int result = GetResult(input_string);
+            string inputString = args[0];
+            int result = GetResult(inputString);
             Console.WriteLine(result);
         }
         
-        public static int GetResult(string input_string)
+        public static int GetResult(string inputString)
         {
-            if (input_string.Length == 1)
+            if (inputString.Length == 1)
                 return 1;
             
             int record = 1;
-            Stack<char> set_chars = new Stack<char>();
+            Stack<char> setChars = new Stack<char>();
 
-            for (int i = 0; i < input_string.Length; i++)
+            for (int i = 0; i < inputString.Length; i++)
             {
-                set_chars.Push(input_string[i]);
-                for (int j = i + 1; (j < input_string.Length) &&
-                     (set_chars.Contains(input_string[j]) == false); j++)
+                setChars.Push(inputString[i]);
+                for (int j = i + 1; (j < inputString.Length) &&
+                     (setChars.Contains(inputString[j]) == false); j++)
                 {
                     
-                    set_chars.Push(input_string[j]);
-                    if (set_chars.Count > record)
+                    setChars.Push(inputString[j]);
+                    if (setChars.Count > record)
                         {
-                            record = set_chars.Count;
+                            record = setChars.Count;
                         }
                 }
-                set_chars.Clear();  
+                setChars.Clear();  
             }
             return record;
         }
