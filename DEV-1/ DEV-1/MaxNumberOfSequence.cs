@@ -12,7 +12,7 @@ namespace DEV1
 	/// Method accepts a string line of different symbols from command line.
 	/// Return: Maximal sequence of different symbols.
 	/// </summary>
-	public static int GetLengthOfSequence(string inputString)
+	public int  GetLengthOfSequence ( строка  inputSt)
         {
             if (inputString.Length == 1)
 		return inputString.Length;
