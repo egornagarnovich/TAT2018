@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * This program accept from command line a sequence of characters as the argument.
+ * And output to the console a maximal sequence of different symbols in line.
+ * 
+ * Author: Egor Nagarnovich
+ * Version: 1.0.0
+ * email: egor.nagarnovich@gmail.com
+*/
+
+using System;
 using System.Collections.Generic;
 
 namespace DEV1
@@ -13,6 +22,11 @@ namespace DEV1
         
         public static int GetResult(string inputString)
         {
+			/*
+             * Method accepts a string line of different symbols from command line
+             * Return: Maximal sequence of different symbols
+            */
+
             if (inputString.Length == 1)
                 return 1;
             
