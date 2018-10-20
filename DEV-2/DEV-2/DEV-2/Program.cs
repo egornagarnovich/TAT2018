@@ -2,8 +2,17 @@
 
 namespace DEV2
 {
+  /// <summary>
+  /// The main Math class.
+  /// Contains all methods for performing basic functions.
+  /// </summary>
   class MainClass
   {
+    /// <summary>
+    /// The entry point of the program, where the program control starts and ends.
+    /// </summary>
+    /// <param name="args">The command-line arguments.</param>
+    /// <param type="string"></param> 
     public static void Main(string[] args)
     {
       try
