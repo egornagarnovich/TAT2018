@@ -22,10 +22,10 @@ namespace DEV2
 	  throw new Exception("Incorrect of argument");
 	}
 	string inputString = args[0].ToLower();
-	TrueDictionary enty = new TrueDictionary();
-	Transliteration reg = new Transliteration();
-	string result = enty.GetTrueDictionary(inputString);
-	string translatedString = reg.ReceiveTranslation(ref result, ref inputString);
+	TrueDictionary dictionaryLanguage = new TrueDictionary();
+	Transliteration translator = new Transliteration();
+	string trueDictionary = dictionaryLanguage.GetTrueDictionary(inputString);
+	string translatedString = translator.ReceiveTranslation(ref trueDictionary, ref inputString);
 	Console.WriteLine(translatedString);
 	}
 	catch (Exception error)
