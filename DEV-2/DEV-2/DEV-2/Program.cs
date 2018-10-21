@@ -22,9 +22,9 @@ namespace DEV2
 	  throw new Exception("Incorrect of argument");
 	}
 	string inputString = args[0].ToLower();
-	TrueDictionary dictionaryLanguage = new TrueDictionary();
+	StringLanguageDiscover dictionaryLanguage = new StringLanguageDiscover();
 	Transliteration translator = new Transliteration();
-	string trueDictionary = dictionaryLanguage.GetTrueDictionary(inputString);
+	string trueDictionary = dictionaryLanguage.GetStringLanguageDiscover(inputString);
 	string translatedString = translator.ReceiveTranslation(ref trueDictionary, ref inputString);
 	Console.WriteLine(translatedString);
 	}
