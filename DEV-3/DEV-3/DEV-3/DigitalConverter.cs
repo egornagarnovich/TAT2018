@@ -13,9 +13,9 @@ namespace DEV3
         /// <returns>The to different digital systems.</returns>
         /// <param name="number">Number.</param>
         /// <param name="convertedNumber">Digital system.</param>
-		public string ConvertToDifferentDigitalSystems(int number, int convertedNumber)
+	public string ConvertToDifferentDigitalSystems(int number, int convertedNumber)
         {
-			return Convert.ToString(number, convertedNumber);
+	    return Convert.ToString(number, convertedNumber);
         }
     }
 }
