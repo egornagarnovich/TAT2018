@@ -23,8 +23,8 @@ namespace DEV3
 		    throw new Exception("Incorrect of argument.");
 		}
 		DigitalConverter converter = new DigitalConverter();
-                string convertedNumber = converter.ConvertToDifferentDigitalSystems(number, newDigitalSystem);
-                Console.WriteLine(convertedNumber);
+               string convertedNumber = converter.ConvertToDifferentDigitalSystems(number, newDigitalSystem);
+               Console.WriteLine(convertedNumber);
 	    }
 	    catch (Exception error)
            {
