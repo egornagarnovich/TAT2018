@@ -1,13 +1,13 @@
 ﻿using System;
 namespace DEV3
 {
-	/// <summary>
+    /// <summary>
     /// The Digital converter.
-	/// Contains all methods for performing basic conversion functions.
+    /// Contains all methods for performing basic conversion functions.
     /// </summary>
     public class DigitalConverter
     {
-		/// <summary>
+	/// <summary>
         /// Converts to different digital systems.
         /// </summary>
         /// <returns>The to different digital systems.</returns>
