@@ -7,7 +7,7 @@ namespace DEV3
     /// </summary>
     public class DigitalConverter
     {
-	/// <summary>
+	 /// <summary>
         /// Converts to different digital systems.
         /// </summary>
         /// <returns>The to different digital systems.</returns>
