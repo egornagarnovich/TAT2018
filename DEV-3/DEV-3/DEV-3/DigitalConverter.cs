@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 namespace DEV3
 {
 	/// <summary>
@@ -15,7 +16,15 @@ namespace DEV3
         /// <param name="convertedNumber">Digital system.</param>
 		public string ConvertToDifferentDigitalSystems(int number, int convertedNumber)
         {
-			return Convert.ToString(number, convertedNumber);
+			string controlValues = "0123456789ABCDEFGHIJ";
+			StringBuilder numberInNewSystem = new StringBuilder(); 
+			do
+			{
+				int numberToAdd = number % convertedNumber;
+				numberInNewSystem.Insert(0, controlValues[Math.Abs(numberToAdd)]);
+				number = number / convertedNumber;
+			} while (number != 0);
+			return numberInNewSystem.ToString();
         }
     }
 }
