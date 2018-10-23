@@ -17,7 +17,7 @@ namespace DEV3
 	    try
 	    {
 		int number = int.Parse(args[0]);
-                int newDigitalSystem = int.Parse(args[1]);
+               int newDigitalSystem = int.Parse(args[1]);
 		if (newDigitalSystem < 2 || newDigitalSystem > 20)
 		{
 		    throw new Exception("Incorrect of argument.");
@@ -27,9 +27,9 @@ namespace DEV3
                 Console.WriteLine(convertedNumber);
 	    }
 	    catch (Exception error)
-            {
+           {
                 Console.WriteLine("Error: " + error.Message);
-            }
+           }
         }
     }
 }
