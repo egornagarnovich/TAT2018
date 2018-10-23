@@ -9,11 +9,11 @@ namespace DEV3
     public class DigitalConverter
     {
 	/// <summary>
-        /// Converts to different digital systems.
-        /// </summary>
-        /// <returns>The to different digital systems.</returns>
-        /// <param name="number">Number.</param>
-        /// <param name="convertedNumber">Digital system.</param>
+       /// Converts to different digital systems.
+       /// </summary>
+       /// <returns>The to different digital systems.</returns>
+       /// <param name="number">Number.</param>
+       /// <param name="convertedNumber">Digital system.</param>
 	public string ConvertToDifferentDigitalSystems(int number, int convertedNumber)
         {
 	string controlValues = "0123456789ABCDEFGHIJ";
@@ -24,7 +24,7 @@ namespace DEV3
 	    numberInNewSystem.Insert(0, controlValues[Math.Abs(numberToAdd)]);
 	    number = number / convertedNumber;
 	} while (number != 0);
-	  return numberInNewSystem.ToString();
+	return numberInNewSystem.ToString();
         }
     }
 }
