@@ -20,9 +20,9 @@ namespace DEV3
 	    StringBuilder numberInNewSystem = new StringBuilder(); 
 	    do
 	    {
-	         int numberToAdd = number % convertedNumber;
-	         numberInNewSystem.Insert(0, controlValues[Math.Abs(numberToAdd)]);
-	         number = number / convertedNumber;
+	       int numberToAdd = number % convertedNumber;
+	       numberInNewSystem.Insert(0, controlValues[Math.Abs(numberToAdd)]);
+	       number = number / convertedNumber;
 	    } while (number != 0);
 	    return numberInNewSystem.ToString();
         }
