@@ -1,0 +1,6 @@
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/bin/Debug/DEV-4.exe
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/bin/Debug/DEV-4.pdb
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/obj/x86/Debug/DEV-4.csprojResolveAssemblyReference.cache
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/obj/x86/Debug/DEV-4.csproj.CoreCompileInputs.cache
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/obj/x86/Debug/DEV-4.exe
+/home/egor_kin/git/TAT2018/DEV-4/DEV-4/DEV-4/obj/x86/Debug/DEV-4.pdb
