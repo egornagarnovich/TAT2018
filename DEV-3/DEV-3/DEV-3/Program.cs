@@ -11,19 +11,23 @@ namespace DEV3
         /// <summary>
         /// The entry point of the program, where the program control starts and ends.
         /// </summary>
-        /// <param name="args">The command-line arguments.</param>
+				/// <param name="args">Integer in decimal and the base of the new number system.</param>
         public static void Main(string[] args)
         {
             try
             {
                 int number = int.Parse(args[0]);
-                int newDigitalSystem = int.Parse(args[1]);
-                if (newDigitalSystem < 2 || newDigitalSystem > 20)
+                int newNumberSystem = int.Parse(args[1]);
+                if (newNumberSystem < 2 || newNumberSystem > 20)
                 {
-                    throw new Exception("Incorrect of argument.");
+                    throw new Exception("Argument is incorrect.");
                 }
-                DigitalConverter converter = new DigitalConverter();
-                string convertedNumber = converter.ConvertToDifferentDigitalSystems(number, newDigitalSystem);
+                NumberConverter converter = new NumberConverter();
+                string convertedNumber = converter.ConvertToDifferentNumberSystems(number, newNumberSystem);
+								if (number < 0)
+								{
+										convertedNumber = string.Concat("-", convertedNumber);
+								}
                 Console.WriteLine(convertedNumber);
             }
             catch (Exception error)
