@@ -11,7 +11,7 @@ namespace DEV3
         /// <summary>
         /// The entry point of the program, where the program control starts and ends.
         /// </summary>
-				/// <param name="args">Integer in decimal and the base of the new number system.</param>
+        /// <param name="args">Integer in decimal and the base of the new number system.</param>
         public static void Main(string[] args)
         {
             try
@@ -24,10 +24,10 @@ namespace DEV3
                 }
                 NumberConverter converter = new NumberConverter();
                 string convertedNumber = converter.ConvertToDifferentNumberSystems(number, newNumberSystem);
-								if (number < 0)
-								{
-										convertedNumber = string.Concat("-", convertedNumber);
-								}
+                if (number < 0)
+                {
+                    convertedNumber = string.Concat("-", convertedNumber);
+                }
                 Console.WriteLine(convertedNumber);
             }
             catch (Exception error)
