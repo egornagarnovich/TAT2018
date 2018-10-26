@@ -18,7 +18,9 @@ namespace DEV3
             {
                 int number = int.Parse(args[0]);
                 int newNumberSystem = int.Parse(args[1]);
-                if (newNumberSystem < 2 || newNumberSystem > 20)
+                int minRadix = 2;
+                int maxRadix = 20;
+                if (newNumberSystem < minRadix || newNumberSystem > maxRadix)
                 {
                     throw new Exception("Argument is incorrect.");
                 }
