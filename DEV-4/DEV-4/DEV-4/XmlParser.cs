@@ -9,35 +9,46 @@ namespace DEV4
     {
         public string GetXmlString(string dataXml)
         {
-            StringBuilder keysString = new StringBuilder();
-            StringBuilder valuesString = new StringBuilder();
-            Dictionary<string, string> aDict = new Dictionary<string, string>();
-            Dictionary<string, string> newDict = new Dictionary<string, string>();
-            for (int i = 0; i < dataXml.Length - 1; i++)
+            StringBuilder keysAndValuesString = new StringBuilder();
+            StringBuilder nextParsedXmlLines = new StringBuilder();
+            Dictionary<string, string> parsedXmlLines = new Dictionary<string, string>();
+            for (int numberElement = 0; numberElement < dataXml.Length - 1; numberElement++)
             {
-                if (dataXml[i] == '<' && dataXml[i + 1] != '/')
+                if ( dataXml[numberElement] == '<' && dataXml[numberElement + 1] == '/')
                 {
-                    while (dataXml[i + 1] != '>')
+                    while ( dataXml[numberElement] != '>')
                     {
-                        keysString.Append(dataXml[i + 1]);
-                        i++;
+                        numberElement++;
                     }
-                    aDict.Add(keysString.ToString(), "");
-                    newDict = aDict;
-                    aDict.Clear();
                 }
-                if (dataXml[i] == '>' && dataXml[i + 1] != '<')
+                if (dataXml[numberElement] == '<' && dataXml[numberElement + 1] != '/')
                 {
-                    while (dataXml[i+1] != '<')
+                    KeyValuePair<string, int> keyAndNumberElement = GetKeys(dataXml, numberElement + 1);
+                    numberElement = keyAndNumberElement.Value;
+                    numberElement++;
+                    if (dataXml[numberElement] == '<' && dataXml[numberElement + 1] != '/')
                     {
-                        valuesString.Append(dataXml[i + 1]);
-                        i++;
+                        KeyValuePair<string, int> nextKeyAndNumberElement = GetKeys(dataXml, numberElement + 1);
+                        parsedXmlLines.Add(keyAndNumberElement.Key, nextKeyAndNumberElement.Key);
+                    }
+                    foreach (KeyValuePair<string, string> keyValue in parsedXmlLines)
+                    {
+                        Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
                     }
                 }
             }
-            Console.WriteLine(keysString);
-            Console.WriteLine(valuesString);
-            return keysString.ToString();
+            return "";
+        }
+
+        public KeyValuePair<string, int> GetKeys(string dataXml, int numberElement)
+        {
+            StringBuilder keys = new StringBuilder();
+            while (dataXml[numberElement] != '>')
+            {
+                keys.Append(dataXml[numberElement]);
+                numberElement++;
+            }
+            return new KeyValuePair<string, int>(keys.ToString(), numberElement);
         }
     }
 }
