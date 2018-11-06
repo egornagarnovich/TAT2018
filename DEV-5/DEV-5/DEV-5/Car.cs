@@ -11,12 +11,14 @@
         int quantityOfCar;
         int costPerUnitOfCar;
         private static Car objCar = new Car();
+        private Car()
+        {}
 
         /// <summary>
         /// Ensures that only one object is created for the class.
         /// </summary>
         /// <returns>The object of car.</returns>
-        public static Car GetObjCar()
+        public static Car GetInstance()
         {
             if (objCar == null)
                 objCar = new Car();

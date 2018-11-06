@@ -5,7 +5,7 @@
     /// </summary>
     public class CarCreator
     {
-        DEV5.Car car = Car.GetObjCar();
+        DEV5.Car car = Car.GetInstance();
         DEV5.Interviewer interviewer = Interviewer.GetObjInterviewer();
 
         /// <summary>

@@ -6,8 +6,8 @@ namespace DEV5
     /// </summary>
     public class DatabaseBuilder
     {
-        private DEV5.Car car = Car.GetObjCar();
-        private DEV5.DatabaseOfCars objDatabase = DatabaseOfCars.GetDatabase();
+        private DEV5.Car car = Car.GetInstance();
+        private DEV5.DatabaseOfCars objDatabase = DatabaseOfCars.GetInstance();
 
         /// <summary>
         /// Reads car class fields.

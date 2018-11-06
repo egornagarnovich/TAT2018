@@ -6,7 +6,7 @@ namespace DEV5
     /// </summary>
     public class DatabaseInformation
     {
-        private DEV5.DatabaseOfCars objDatabase = DatabaseOfCars.GetDatabase();
+        private DEV5.DatabaseOfCars objDatabase = DatabaseOfCars.GetInstance();
         /// <summary>
         /// Reads database fields. Counts data.
         /// </summary>
