@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{379EA451-159A-4EA4-A91D-C2C9374044A2}</ProjectGuid>
+    <ProjectGuid>{C342FC51-16C7-4B3A-B23A-776A99F7A040}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DEV4</RootNamespace>
-    <AssemblyName>DEV-4</AssemblyName>
+    <RootNamespace>DEV3</RootNamespace>
+    <AssemblyName>DEV-3</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,7 +34,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlParser.cs" />
+    <Compile Include="NumberConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
