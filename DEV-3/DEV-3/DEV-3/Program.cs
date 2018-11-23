@@ -20,7 +20,7 @@ namespace DEV3
                 int newNumberSystem = int.Parse(args[1]);
                 int minRadix = 2;
                 int maxRadix = 20;
-                if (newNumberSystem < minRadix || newNumberSystem > maxRadix &&
+                if (newNumberSystem < minRadix || newNumberSystem > maxRadix ||
                     number.GetType() != typeof(int) || newNumberSystem.GetType() != typeof(int))
                 {
                     throw new Exception("Argument is incorrect.");
