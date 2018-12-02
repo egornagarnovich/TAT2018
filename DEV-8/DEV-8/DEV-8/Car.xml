@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<root>
+  <Car>
+        <Brand>Audi</Brand>
+        <Model>a6</Model>
+        <Quantity>53</Quantity>
+        <UnitCost>4000</UnitCost>
+        <Brand>BMW</Brand>
+        <Model>x5</Model>
+        <Quantity>12</Quantity>
+        <UnitCost>9000</UnitCost>
+  </Car>
+</root>
