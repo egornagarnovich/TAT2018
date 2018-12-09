@@ -2,8 +2,16 @@
 
 namespace task1
 {
+    /// <summary>
+    /// Main class.
+    /// Contains all methods for performing basic functions.
+    /// </summary>
     class MainClass
     {
+        /// <summary>
+        /// The entry point of the program, where the program control starts and ends.
+        /// </summary>
+        /// <param name="args">Arbitrary string.</param>
         public static void Main(string[] args)
         {
             try
