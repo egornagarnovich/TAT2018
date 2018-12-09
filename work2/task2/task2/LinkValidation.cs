@@ -8,15 +8,12 @@ namespace task2
         {            
             try
             {
-                Console.WriteLine('q');
-
                 WebClient wc = new WebClient();
                 string HTMLSource = wc.DownloadString(link);
                 return true;
             }
             catch (Exception)
             {
-
                 return false;
             }          
         }
