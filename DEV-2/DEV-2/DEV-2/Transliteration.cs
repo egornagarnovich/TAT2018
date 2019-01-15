@@ -6,46 +6,43 @@ using System.Web.Script.Serialization;
 
 namespace DEV2
 {
-  /// <summary>
-  /// The Transliteration class.
-  /// Contains all text translation methods.
-  /// </summary>
-  public class Transliteration
-  {
     /// <summary>
-    /// Receives the translation.
-    /// Translates text depending on input arguments.
+    /// Transliteration.
     /// </summary>
-    /// <returns>The translation.</returns>
-    /// <param name="language">Language.</param>
-    /// <param name="inputString">Input text.</param>
-    public string ReceiveTranslation(ref String language, ref String inputString)
+    public class Transliteration
     {
-      StringBuilder transliteratedString = new StringBuilder();
-      transliteratedString.Append(inputString);
-      if (language == "english")
-      {
-	// Parsing json file containing translation dictionary.
-	string dictEngInRus = File.ReadAllText("./eng_in_rus.json");
-	var serializer = new JavaScriptSerializer();
-	var dictionaryTranslator = serializer.Deserialize<Dictionary<string, string>>(dictEngInRus);
-	foreach (string elementDict in dictionaryTranslator.Keys)
+        /// <summary>
+        /// Receives the translation.
+        /// Translates text depending on input arguments.
+        /// </summary>
+        /// <returns>The translation.</returns>
+        /// <param name="language">Language.</param>
+        /// <param name="inputString">Input string.</param>
+        public string ReceiveTranslation(ref String language, ref String inputString)
         {
-	  transliteratedString.Replace(elementDict, dictionaryTranslator[elementDict]);
+            StringBuilder transliteratedString = new StringBuilder();
+            transliteratedString.Append(inputString);
+            if (language == "english")
+            {
+                string dictEngInRus = File.ReadAllText("./eng_in_rus.json");
+                var serializer = new JavaScriptSerializer();
+                var dictionaryTranslator = serializer.Deserialize<Dictionary<string, string>>(dictEngInRus);
+                foreach (string elementDict in dictionaryTranslator.Keys)
+                {
+                    transliteratedString.Replace(elementDict, dictionaryTranslator[elementDict]);
+                }
+            }
+            else
+            {
+                string dictEngInRus = File.ReadAllText("./rus_in_eng.json");
+                var serializer = new JavaScriptSerializer();
+                var dictionaryTranslator = serializer.Deserialize<Dictionary<string, string>>(dictEngInRus);
+                foreach (string elementDict in dictionaryTranslator.Keys)
+                {
+                    transliteratedString.Replace(elementDict, dictionaryTranslator[elementDict]);
+                }
+            }
+            return transliteratedString.ToString();
         }
-      }
-      else
-      {
-	// Parsing json file containing translation dictionary.		
-	string dictEngInRus = File.ReadAllText("./rus_in_eng.json");
-        var serializer = new JavaScriptSerializer();
-	var dictionaryTranslator = serializer.Deserialize<Dictionary<string,string>>(dictEngInRus);
-        foreach (string elementDict in dictionaryTranslator.Keys)
-        {
-	  transliteratedString.Replace(elementDict, dictionaryTranslator[elementDict]);
-        }
-      }
-      return transliteratedString.ToString();
     }
-  }
 }
