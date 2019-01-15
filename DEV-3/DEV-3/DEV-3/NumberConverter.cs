@@ -12,19 +12,19 @@ namespace DEV3
         /// <summary>
         /// Converts to different number systems.
         /// </summary>
-        /// <returns>New system radix.</returns>
+        /// <returns>Number in the new number system.</returns>
         /// <param name="number">Convertible number.</param>
-        /// <param name="convertedNumber">Number new system radix.</param>
-        public string ConvertToDifferentNumberSystems(int number, int convertedNumber)
+        /// <param name="numberNewSystemRadix">Number new system radix.</param>
+        public string ConvertToDifferentNumberSystems(int number, int numberNewSystemRadix)
         {
-            StringBuilder newSystemRadix = new StringBuilder();
+            StringBuilder newNumber = new StringBuilder();
             do
             {
-                int numberNewSystem = number % convertedNumber;
-                newSystemRadix.Insert(0, controlValues[Math.Abs(numberNewSystem)]);
-                number = number / convertedNumber;
+                int numberNewSystem = number % numberNewSystemRadix;
+                newNumber.Insert(0, controlValues[Math.Abs(numberNewSystem)]);
+                number = number / numberNewSystemRadix;
             } while (number != 0);
-            return newSystemRadix.ToString();
+            return newNumber.ToString();
         }
     }
 }

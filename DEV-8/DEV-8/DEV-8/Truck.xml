@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<root>
+  <Car>
+        <Brand>Volvo</Brand>
+        <Model>fh16</Model>
+        <Quantity>9</Quantity>
+        <UnitCost>20000</UnitCost>
+        <Brand>Scania</Brand>
+        <Model>s500</Model>
+        <Quantity>18</Quantity>
+        <UnitCost>18500</UnitCost>
+  </Car>
+</root>
+
