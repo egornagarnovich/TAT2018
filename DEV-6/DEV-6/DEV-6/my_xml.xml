@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <Keys>
+      <element>
+         <highway>
+            <element>bus_stop</element>
+            <element>crossing</element>
+            <element>steps</element>
+         </highway>
+      </element>
+      <element>
+         <building>
+            <element>hotel</element>
+         </building>
+      </element>
+   </Keys>
+</root>
