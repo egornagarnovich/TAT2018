@@ -1,0 +1,6 @@
+{
+  "Keys": [
+    {"highway": ["bus_stop", "crossing", "steps"]},
+    {"building": ["hotel"]}
+  ]
+}
